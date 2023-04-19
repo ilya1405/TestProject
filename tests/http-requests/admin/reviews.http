@@ -1,0 +1,9 @@
+### оставить комментарий на отзыв
+PUT http://127.0.0.1:8000/api/admin/reviews/2
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 3|eRI1yEOt9vRy1W2irjruRyUhmouFBjNSXta6MBtk
+
+{
+    "answer": "ответ на отзыв"
+}

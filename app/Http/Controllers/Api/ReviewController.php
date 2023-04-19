@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Events\NewReviewEvent;
 use App\Http\Controllers\Controller;
-use app\Http\Requests\Admin\ReviewRequest;
+use App\Http\Requests\ReviewRequest;
 use App\Http\Resources\ReviewResource;
 use App\Models\Review;
 use Illuminate\Support\Facades\Auth;

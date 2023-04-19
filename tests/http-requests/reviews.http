@@ -1,0 +1,16 @@
+### получить все отзывы
+GET http://127.0.0.1:8000/api/reviews
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|5Z4SZlYTOPyBNQQh4aBkAYRxZqaTyAImv9v68XAD
+
+### создать отзыв
+POST http://127.0.0.1:8000/api/reviews
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|5Z4SZlYTOPyBNQQh4aBkAYRxZqaTyAImv9v68XAD
+
+{
+    "comment": "тестовый отзыв1"
+}
+

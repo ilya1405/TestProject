@@ -1,0 +1,26 @@
+### register
+POST http://127.0.0.1:8000/api/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Test-user2",
+    "email": "test2@gmail.com",
+    "password": "password123"
+}
+
+### login
+POST http://127.0.0.1:8000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "password123"
+}
+
+### logout
+GET http://127.0.0.1:8000/api/auth/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 1|5Z4SZlYTOPyBNQQh4aBkAYRxZqaTyAImv9v68XAD
