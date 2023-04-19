@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('admin')->group(function () {
+    Route::put('reviews/{review}', [\App\Http\Controllers\Api\Admin\ReviewController::class, 'update'])
+        ->middleware('role:admin');
 });
+
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get('auth/logout', [\App\Http\Controllers\Api\AuthController::class, 'logoutUser']);
+
+    Route::apiResource('reviews', \App\Http\Controllers\Api\ReviewController::class)
+        ->only(['index', 'store']);
+});
+
+Route::post('auth/register', [\App\Http\Controllers\Api\AuthController::class, 'createUser']);
+Route::post('auth/login', [\App\Http\Controllers\Api\AuthController::class, 'loginUser']);
